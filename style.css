@@ -1,0 +1,140 @@
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+	margin: 0;
+	padding: 1rem;
+}
+
+.container {
+	background: #fff;
+	padding: 1.5rem;
+	border-radius: 1.5rem;
+	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+	max-width: 90vw;
+	width: 100%;
+	max-width: 350px;
+	text-align: center;
+	transition: box-shadow 0.3s;
+}
+
+.container:hover {
+	box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+h1 {
+	font-size: clamp(1.5rem, 5vw, 2rem);
+	margin: 0 0 1.5rem 0;
+	color: #f76b1c;
+	letter-spacing: 1px;
+}
+
+.input {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+label {
+	font-size: clamp(0.875rem, 3vw, 1rem);
+	color: #333;
+	margin-bottom: 0.3rem;
+	text-align: left;
+	font-weight: 500;
+}
+
+input[type="number"] {
+	padding: 0.75rem;
+	border: 1px solid #fda085;
+	border-radius: 0.5rem;
+	font-size: clamp(0.875rem, 3vw, 1rem);
+	outline: none;
+	transition: border 0.2s, background 0.2s;
+	background: #f9f9f9;
+	width: 100%;
+	min-height: 2.5rem;
+}
+
+input[type="number"]:focus {
+	border: 1.5px solid #f76b1c;
+	background: #fff7f0;
+}
+
+#calculate {
+	background: linear-gradient(90deg, #fda085 0%, #f6d365 100%);
+	color: #fff;
+	border: none;
+	border-radius: 0.5rem;
+	padding: 0.9rem 1.5rem;
+	font-size: clamp(0.95rem, 3vw, 1.1rem);
+	font-weight: 600;
+	cursor: pointer;
+	margin-bottom: 1.2rem;
+	box-shadow: 0 2px 8px rgba(253, 160, 133, 0.12);
+	transition: background 0.2s, transform 0.2s;
+	min-height: 2.8rem;
+	width: 100%;
+}
+
+#calculate:active {
+	transform: translateY(-1px) scale(0.98);
+}
+
+@media (hover: hover) {
+	#calculate:hover {
+		background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
+		transform: translateY(-2px) scale(1.03);
+	}
+}
+
+#result {
+	font-size: clamp(0.95rem, 3vw, 1.15rem);
+	color: #333;
+	background: #fff7f0;
+	border-radius: 0.5rem;
+	padding: 1rem;
+	min-height: 2.2rem;
+	box-shadow: 0 1px 4px rgba(253, 160, 133, 0.08);
+	margin-top: 0.5rem;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+	body {
+		padding: 2rem;
+	}
+
+	.container {
+		padding: 2.5rem 2rem;
+		max-width: 400px;
+	}
+
+	h1 {
+		margin-bottom: 2rem;
+		letter-spacing: 2px;
+	}
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 1024px) {
+	.container {
+		padding: 2.5rem 2rem;
+		max-width: 450px;
+	}
+}
+
