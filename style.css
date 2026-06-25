@@ -18,20 +18,55 @@ body {
 	padding: 1rem;
 }
 
+body.dark-mode {
+    background: #1e1d1d;
+}
+
+body.dark-mode .container {
+    background: #4d4c4c;
+    color: white;
+}
+
+body.dark-mode label {
+	color: white;
+}
+
+body.dark-mode input {
+    background: #3a3a3a;
+	color: #c7c5c5;
+    border-color: #555;
+}
+
+body.dark-mode #result {
+    color: white;
+}
+
 .container {
 	background: #fff;
 	padding: 1.5rem;
+	position: relative;
 	border-radius: 1.5rem;
 	box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
 	max-width: 90vw;
 	width: 100%;
-	max-width: 350px;
+	max-width: 400px;
 	text-align: center;
 	transition: box-shadow 0.3s;
 }
 
 .container:hover {
 	box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header h1 {
+    margin: 2rem;
 }
 
 h1 {
@@ -70,7 +105,7 @@ input[type="number"] {
 
 input[type="number"]:focus {
 	border: 1.5px solid #f76b1c;
-	background: #fff7f0;
+	background: #2d2d2d;
 }
 
 #calculate {
@@ -96,7 +131,7 @@ input[type="number"]:focus {
 @media (hover: hover) {
 	#calculate:hover {
 		background: linear-gradient(90deg, #f6d365 0%, #fda085 100%);
-		transform: translateY(-2px) scale(1.03);
+		transform: translateY(-3px) scale(1.03);
 	}
 }
 
@@ -111,6 +146,48 @@ input[type="number"]:focus {
 	margin-top: 0.5rem;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
+}
+
+button {
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+	transition: all 0.3s;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+
+    border: none;
+    padding: 8px 14px;
+    border-radius: 50px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#themeToggle:hover {
+	transform: translateY(-3px);
+}
+
+.light {
+	background-color: white;
+	color: black;
+	border: 2px solid black;
+}
+
+.light:hover {
+	background-color: #c7c5c5;
+}
+
+.dark{
+	background-color: #1f1f1f;
+	color: white;
+	border: 2px solid white;
+}
+
+.dark:hover {
+	background-color: #636262;
 }
 
 /* Tablet (768px and up) */
