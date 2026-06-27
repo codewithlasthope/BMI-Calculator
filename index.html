@@ -18,6 +18,9 @@
             
             <div class="calculator-page">
                 <div class="input">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name">
+                    
                     <label for="weight">Weight (kg):</label>
                     <input type="number" id="kg" required>
         
@@ -30,11 +33,16 @@
                 <div id="result">
                     
                 </div>
+
+                <div id="recommendation">
+
+                </div>
             </div>
 
             
             <div class="history-page hidden">
                 <h2>History</h2>
+                <input type="text" id="searchInput" placeholder="Search BMI via name...">
                 
                 <div id="history-list">
                     
@@ -85,12 +93,64 @@
             </div>
         </div>
 
+        <div class="analytics-page hidden">
+            <h2>📊 Analytics</h2>
+            <div class="analytics-summary">
+
+                <div class="summary-card">
+                    <h3>Current BMI</h3>
+                    <p id="currentBMI">--</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Highest BMI</h3>
+                    <p id="highestBMI">--</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Lowest BMI</h3>
+                    <p id="lowestBMI">--</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Average BMI</h3>
+                    <p id="averageBMI">--</p>
+                </div>
+
+                <div class="summary-card">
+                    <h3>Total Records</h3>
+                    <p id="totalRecords">0</p>
+                </div>
+
+            </div>
+        <div class="chart-wrapper">
+            <canvas id="bmiChart"></canvas>
+        </div>
+        </div>
+
         <div class="bottom-nav">
             <button id="calcTab" class="active-tab">Calculator</button>
             <button id="historyTab">History</button>
             <button id="chartTab">Chart</button>
+            <button id="analyticTab">Analytics</button>
+        </div>
+
+    </div>
+    
+    <div id="confirmModal" class="modal hidden">
+        <div class="modal-content">
+            <h3>Delete Record?</h3>
+            
+            <p id="modalText">This action cannot be undone</p>
+
+            <div class="modal-buttons">
+                <button id="cancelBtn">cancel</button>
+                <button id="confirmBtn">delete</button>
+            </div>
         </div>
     </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
